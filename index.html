@@ -45,6 +45,7 @@
         input[type=range]::-webkit-slider-thumb { transform: scale(0.7); }
         input[type=range]::-webkit-slider-thumb:hover { cursor: ew-resize; }
         input[type=number] { appearance: textfield; }
+        input[type=number]:hover { appearance: unset; }
         select { font-family: var(--font); width: 100%; background: #2d3644; color: #aaa; padding: 2px; border: solid 1px #343c49; border-radius: 3px; outline: none; vertical-align: middle; }
         select:hover { color: cadetblue; cursor: pointer; }
         option { font-family: var(--font); color: silver; background: #252931; }
@@ -131,7 +132,6 @@
                     <label>Output</label> <select title="Resize Format" id="resizeformat">
                         <option value="png" selected>PNG</option>
                         <option value="jpeg">JPG</option>
-                        <option value="bmp">BMP</option>
                         <option value="webp">WEBP</option>
                     </select>
                 </li>
@@ -688,8 +688,6 @@
         inputPercent.disabled = false;
         inputImageAspect.disabled = false;
         inputImageAspect.checked = true;
-        inputReader.checked = true;
-        inputReader.nextElementSibling.innerHTML = 'Read as Data';
         stChars.value = 0;
         zoomReset();
     }
